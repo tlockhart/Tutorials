@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson22DirectivesTalkingToControllers</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+
+</head>
+<body ng-app="app" ng-controller="FunCtrl as fun">
+<!--Parts1 and 2-->
+<!--div entering>Hover over me for fun times</div-->
+
+<!--Part3: Passing functions as parameters-->
+<div entering="fun.start()" leaving="fun.end()">Hover over me for fun times</div>
+
+</body></body>
+</html>
