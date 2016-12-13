@@ -1,0 +1,19 @@
+<div role="tabpanel">
+    <!--deprecated ul class="nav nav-tabs" role="tablist"-->
+    <!--See Tabs and Pills section of bootstrap http://getbootstrap.com/components/#navbar-->
+    <!--Part10 Add tabset controller--add Use nav-pills-->
+    <ul class="nav nav-pills" ng-class="tabset.classes" role="tablist">
+    <!--Part10 Add tabset controller--add Use nav-tabs-->
+    <!--ul class="nav nav-tabs" ng-class="tabset.classes" role="tablist"-->
+        <li role="presentation"
+            ng-repeat="tab in tabset.tabs"
+            ng-class="{'active': tab.active, 'disabled': tab.disabled}"><!--Part7 Display outline of activated tab, Part8 disable tab.-->
+            <a href=""
+               role="tab"
+               ng-click="tabset.select(tab)">{{tab.heading}}</a>
+        </li>
+    </ul>
+
+    <ng-transclude>
+    </ng-transclude>
+</div>
