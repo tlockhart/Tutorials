@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson29 Isolate Scope with @</title>
+    <script type="text/javascript"
+            src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+
+<div ng-app="drinkApp">
+    <div ng-controller="AppCtrl">
+        <!--Part1 <div drink flavor="strawberry"></div>-->
+        <!--Part2 Return blackberry if empty, or update ctrlFlavor
+        value with input from the ctrlFlavor parent element-->
+        <input type="text" ng-model="ctrlFlavor">
+        <div drink flavor="{{ ctrlFlavor }}"></div>
+    </div>
+</div>
+
+</body>
+</html>
