@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson31 Isolate Scope with &</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+<div ng-app="phoneApp">
+    <div ng-controller="AppCtrl">
+        <div phone dial="callHome('called home!')"></div>
+        <div phone dial="callHome(message)"></div>
+    </div>
+</div>
+</body>
+</html>

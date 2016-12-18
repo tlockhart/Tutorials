@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 30 Isolate Scope with =(Two Way Binding)</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+<div ng-app="drinkApp">
+    <div ng-controller="AppCtrl">
+        <!--A binding is set up both ways, so that an template with an <input>-->
+        <!--will bind to the controller object, allowing modification.-->
+
+        <!--The Ctrl input is bound normally to the ctrlFlavor model. -->
+        <input type="text" ng-model="ctrlFlavor"><!--Ctrl-->
+
+        <!--The drink directive input is invoked with the ctrlFlavor object as the flavor parameter.-->
+        <div drink flavor="ctrlFlavor"></div><!--Dir-->
+    </div>
+</div>
+
+</body>
+</html>
