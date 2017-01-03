@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Binding</title>
+    <script type="text/javascript"
+            src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+</head>
+<body>
+<div ng-app>
+    <!--Example Once: Data Binding-->
+    <h1>Binding1 {{message1}}</h1>
+    <!--ng-model is a directive in AngularJS that binds a variable (message) from an input field to a scope variable.-->
+    <input type="text" ng-model="message1">
+    <!--Bind the message variable to the view-->
+    <!--Angular knows the expression between brackets needs to be evaluated-->
+    <p>{{ message1 }}</p>
+    <p>{{ message1 + message1}}</p>
+    <p>{{ message1 === 'hello'}}</p>
+    <p>{{ 1 + 2 }}</p>
+    <br>
+    <!--**************************************************************************************************-->
+    <!-- Example2: While html is combining, it is possible to see {}.  To hide this use the ng-bind directive-->
+    <!--ng-bind is used as an element to hide our binding, until its ready to be displayed-->
+
+    <!--the entire inner text of the element gets replaced with what the expression returns, so we had to -->
+    <!--move the Binding text from our header into the ng-bind expression to get the same results as before.-->
+    <h1 ng-bind="'Binding2 ' + message2"></h1>
+    <input type="text" ng-model="message2">
+    <p ng-bind="message2"></p>
+    <p ng-bind="message2 + message2"></p>
+    <p ng-bind="message2 === 'hello'"></p>
+    <p ng-bind="1 + 2"></p>
+    <!--**************************************************************************************************-->
+    <!--Example3: One-Time Binding is when the data is read once from the source, then left unsynchronized-->
+    <!--Prefix variables with :: for one-time binding-->
+    <h1 ng-bind="'Binding3 ' + message3"></h1>
+    <!--ng-init is a directive that evaluates the given expression once when the element is initialized.-->
+    <!--The first time the comparison evaluates to true, then the comparison stops listining for changes, -->
+    <!--leaveing true despite the value enetered-->
+    <input type="text" ng-model="message3" ng-init="message3 = 'hello'">
+    <p ng-bind="message3"></p>
+    <p ng-bind="message3 + message3"></p>
+    <p ng-bind="::message3 === 'hello'"></p>
+    <p ng-bind="1 + 2"></p>
+</div>
+
+</div>
+</body>
+</html>

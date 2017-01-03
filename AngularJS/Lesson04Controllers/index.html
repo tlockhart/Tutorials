@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 4: AngularJS Controllers</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+<div ng-app="app"><!--Angular App Name or Module-->
+    <h1>Controllers</h1>
+    <!--Example 1: declare the constructor function Using $Scope Variable-->
+    <!--div ng-controller="MainCtrl">
+        <p>{{message}}</p-->
+        <!--The The ng-submit directive that we used in our form tag contains
+        an Angular expression that gets executed when the form gets submitted-->
+        <!--form ng-submit="updateMessage(newMessage)"-->
+            <!--Bind input variable to model-->
+            <!--input type="text" ng-model="newMessage">
+            <button type="submit">Update Message</button>
+        </form>
+    </div-->
+    <!--Example 2: Controller as Syntax-->
+    <div ng-controller="MainCtrl2 as main">
+        <p>{{main.message}}</p>
+        <form ng-submit="main.changeMessage(main.newMessage)">
+            <input type="text" ng-model="main.newMessage">
+            <button type="submit">Change Message</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

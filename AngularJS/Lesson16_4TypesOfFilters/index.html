@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript"
+            src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <title>Lesson16 4 Types of Filters</title>
+</head>
+<body>
+<div ng-app="app">
+    <div ng-controller="PersonCtrl as person">
+        <!-- Type 2 Iterating over data-->
+        <!--ul>
+            <li ng-repeat="friend in person.friends | startsWithA">
+                {{ friend }}
+            </li>
+        </ul-->
+        <!--/Type 3 sending arguments-->
+        <!--input type="text" ng-model="letter">
+        <ul>
+            <li ng-repeat="friend in person.friends | startsWithLetter:letter">
+                {{ friend }}
+            </li>
+        </ul-->
+
+        <!--Type4 passing functions -->
+        <ul><h1>Filter Array values starting with W.</h1>
+            <li ng-repeat="friend in person.friends | filter:person.startsWithW">
+                {{ friend }}
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 14 ngFilter</title>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-app="app" ng-controller="TestCtrl as test">
+        <input type="text" ng-model="search" />
+
+        <!--p ng-repeat="person in test.people | filter: search"-->
+        <!--p ng-repeat="person in test.people | orderBy:'name'">
+        <p ng-repeat="person in test.people | limitTo:2"-->
+        <p ng-repeat="person in test.people | filter:search | orderBy:'name'  | limitTo: 3">
+            {{ person.name }}
+        </p>
+        <p>{{ 1400956671914 | date: 'dd-MM-yyyy' }}</p>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!--Lesson 5 Services: Code Challenge-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson5 Services: Code Challenge</title>
+    <!--Step1: Import Angular API-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+    <!--Step2: Import App.js file-->
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+<!--Step3: Register the APP-->
+<div ng-app="app">
+    <!--Step4: Register the Controller-->
+    <div ng-controller="PostCtrl as post">
+        <!--OnSubmit add a message to the messages.list-->
+        <form ng-submit="post.addMessage(post.newMessage)">
+            <input type="text" ng-model="post.newMessage">
+            <button type="submit">Add Message</button>
+        </form>
+    </div>
+    <!--Register the Controller-->
+    <div ng-controller="ListCtrl as list">
+        <p ng-repeat="message in list.messages">{{message.id}}:{{message.text}}</p>
+    </div>
+</div>
+</body>
+</html>
